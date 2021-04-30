@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+     Storage V1
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+    <ion-input
+      name="name" type="text"
+      placeholder="ArtikelNaam"
+      [(ngModel)]='tempName'>
+    </ion-input>
+  </ion-item>
+ <ion-button (click)="setItem()" >
+    <ion-icon
+      slot="icon-only" name="save"> sla op
+    </ion-icon>
+  </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="getItem()" >
+    <ion-icon slot="icon-only" name="download">getItem</ion-icon>
+    </ion-button>
+
+  <ion-button (click)=" defaultItem()" >
+    <ion-icon slot="icon-only" name="skull-outline">getItem</ion-icon>
+  </ion-button>
+
+Naam: {{tempName}}
+
 </ion-content>
